@@ -1,0 +1,38 @@
+$(document).ready(function(){
+
+	if ($('body').attr('id') == ("proyectos")) { 
+		$('.bxslider').bxSlider({
+			auto:true,	
+		  default: 'horizontal',
+		  maxSlides: 1,
+		  controls:false,
+		  pager:true,
+		  pagerCustom: '#bx-pager',
+		  adaptiveHeight:true,
+		  captions:false
+
+	});
+
+	if($('#proyectos #bx-pager').height() > 100) {
+			$('#proyectos .pager').css('overflow-y', 'scroll');
+		}	
+	
+	}
+
+	
+	if ($('body').attr('id') == ("contacto")) {
+		$("#form_contacto").submit(function(event) {
+    	event.preventDefault();
+    		$('#contacto form ul').hide();
+    		$('#contacto form .gracias').show();
+    	});
+
+    }
+
+
+	
+
+	
+
+})
+
